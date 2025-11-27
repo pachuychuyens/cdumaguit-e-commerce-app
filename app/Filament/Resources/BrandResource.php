@@ -47,7 +47,8 @@ class BrandResource extends Resource
                      ->dehydrated()
                     ->unique(Brand::class, ignoreRecord: true),
                 Forms\Components\FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->directory('brands'),
                 Forms\Components\Toggle::make('is_active')
                     ->required(),
             ]);
