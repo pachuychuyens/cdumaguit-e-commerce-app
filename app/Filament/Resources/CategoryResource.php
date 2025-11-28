@@ -24,6 +24,8 @@ use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\DeleteAction;
 
+
+
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
