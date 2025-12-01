@@ -35,18 +35,6 @@ use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\DeleteAction;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class OrderResource extends Resource
 {
     protected static ?string $model = Order::class;
