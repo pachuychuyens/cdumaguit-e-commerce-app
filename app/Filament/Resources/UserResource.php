@@ -20,7 +20,11 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationIcon = 'heroicon-o-bolt';
+
+    protected static ?string $recordTitleAttribute = 'name';
 
     public static function form(Form $form): Form
     {
@@ -85,6 +89,11 @@ class UserResource extends Resource
             OrdersRelationManager::class,
         ];
     }
+
+    public static function getGloballySearchableAttributes(): array
+{
+    return ['name', 'email'];
+}
 
     public static function getPages(): array
     {
