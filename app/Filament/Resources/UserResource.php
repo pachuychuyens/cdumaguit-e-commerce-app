@@ -14,6 +14,7 @@ use Filament\Resources\Pages\CreateRecord;
 use Filament\Resources\Pages\Page;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use app\Filament\Resources\UserResource\RelationManagers\OrdersRelationManager;
 
 class UserResource extends Resource
 {
@@ -81,7 +82,7 @@ class UserResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            OrdersRelationManager::class,
         ];
     }
 
