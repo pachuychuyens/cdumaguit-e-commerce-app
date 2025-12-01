@@ -23,7 +23,7 @@ use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\DeleteAction;
-
+  
 
 
 class CategoryResource extends Resource
@@ -51,7 +51,7 @@ class CategoryResource extends Resource
                             ->disabled()
                             ->required()
                             ->dehydrated()
-                            ->unique(Category::class, ignoreRecord: true)
+                            ->unique(Category::class,'slug', ignoreRecord: true)
                     ]),
                      
                 FileUpload::make('image')

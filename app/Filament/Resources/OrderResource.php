@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources;
 
+use AddressInfo;
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
+use App\Filament\Resources\OrderResource\RelationManagers\AddressRelationManager;
 use App\Models\Order;
 use Filament\Forms;
 use Filament\Forms\Components\Group;
@@ -31,6 +33,7 @@ use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\DeleteAction;
+
 
 
 
@@ -274,7 +277,7 @@ class OrderResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+          AddressRelationManager::class
         ];
     }
 
@@ -282,7 +285,7 @@ class OrderResource extends Resource
         return static::getModel()::count();
     }
 
-    public static function getNavigationBadgecolor(): string|array|null {
+    public static function getNavigationBadgecolorx(): string|array|null {
         return static::getModel()::count() > 10 ? 'danger': 'success';
     }
 
