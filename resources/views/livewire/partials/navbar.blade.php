@@ -63,7 +63,7 @@
                         </button>
 
                         <div class="hs-dropdown-menu hidden md:w-48 bg-white dark:bg-gray-800 rounded-lg p-2">
-                            <a href="#">My Orders</a>
+                            <a wire:navigate href="/my-orders" >My Orders</a>
                             <a href="#">My Account</a>
                             <a href="/logout">Logout</a>
                         </div>
